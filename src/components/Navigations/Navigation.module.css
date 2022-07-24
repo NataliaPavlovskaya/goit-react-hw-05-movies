@@ -1,23 +1,19 @@
 .nav {
     margin: 20px auto 0;
     text-align: start;
-    background-color: #527c82;
+    background-color: #5e5282;
     border-radius: 8px;
-    box-shadow: inset rgba(0, 0, 0, 0.541) -3px -3px 8px,
-      inset rgba(255, 253, 253, 0.9) 3px 3px 8px,
-      rgba(0, 0, 0, 0.8) 3px 3px 8px -3px;
   }
   .link {
     display: inline-block;
     padding: 15px 20px;
     font-weight: 600;
-    color: #fff;
+    color: rgb(238, 22, 235);
     font-size: 18px;
     text-decoration: none;
     text-transform: uppercase;
   }
   
 .activeLink {
-    composes: link;
-    color: #e3f309cb;
+    color: #9d09f3cb;
   }
