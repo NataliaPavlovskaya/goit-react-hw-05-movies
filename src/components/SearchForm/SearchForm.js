@@ -31,10 +31,6 @@ const SearchFrom = ({onSearch}) => {
   
   return (
   <form className={styles.SearchForm} onSubmit={handleFormSubmit}>
-    <button type="submit" className={styles['SearchForm-button']}>
-      <span className={styles['SearchForm-button-label']}>Search</span>
-    </button>
-
     <input
       className={styles['SearchForm-input']}
       type="text"
