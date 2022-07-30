@@ -4,7 +4,13 @@
   .nav {
     margin: 20px auto 0;
     text-align: start;
-    background-color: #5e5282;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      #606dbc,
+      #606dbc 15px,
+      #465298 15px,
+      #465298 30px
+    );
     border-radius: 8px;
   }
   .link {
