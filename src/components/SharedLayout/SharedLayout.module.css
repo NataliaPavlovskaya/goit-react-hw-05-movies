@@ -1,4 +1,7 @@
-.nav {
+.header {
+    min-height: 40px;
+  }
+  .nav {
     margin: 20px auto 0;
     text-align: start;
     background-color: #5e5282;

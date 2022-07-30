@@ -5,11 +5,11 @@ const API_KEY = 'd2088e493093cc1b7e7b50d5b735bf4d';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
 const END_POINTS = {
-  trending: '/trending/movie/week',
+  trending: '/trending/get-trending',
   querySearch: '/search/movie',
-  movieDetails: '/movie',
-  movieCredits: '/credits',
-  movieReviews: '/reviews',
+  movieDetails: '/movie', //movie/{movie_id}
+  movieCredits: '/credits', ///movie/{movie_id}/credits
+  movieReviews: '/reviews', ///movie/{movie_id}/reviews
 };
 
 export const getMovies = async (page = 1) => {

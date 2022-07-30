@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import SearchBar from 'components/SearchForm/SearchForm';
 import { fetchByQuery } from 'services/api';
 import MovieList from 'components/TrendingMovies/MovieList';
-import PageHeading from 'components/PageHeading/PageHeading';
+import PageHeading from 'components/PageРeading/PageHeading';
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();

@@ -1,16 +1,38 @@
 import React from 'react'
-import styles from './AppBar.module.css';
-import Navigations from 'components/Navigations';
+import styles from './SharedLayout.module.css';
+import { NavLink } from 'react-router-dom';
 
-const AppBar = () => {
+const SharedLayout = () => {
   return (
     <header className={styles.header}>
-      <Navigations />
+    <nav className={styles.nav}>
+      <NavLink
+        exact
+        to="/"
+        className={styles.link}
+        activeClassName={styles.activeLink}
+      >
+        Home
+      </NavLink>
+
+      <NavLink
+        exact
+        to="/movies"
+        className={styles.link}
+        activeClassName={styles.activeLink}
+      >
+        Movies
+      </NavLink>
+      
+    </nav>
     </header>
   );
 }
 
-export default AppBar;
+export default SharedLayout;
+
+
+
 
 
 

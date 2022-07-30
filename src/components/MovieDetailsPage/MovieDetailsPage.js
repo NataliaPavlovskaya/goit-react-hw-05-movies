@@ -1,10 +1,10 @@
-import s from './MovieDetailsPage.module.css';
+import styles from './MovieDetailsPage.module.css';
 import { useEffect, useState } from 'react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesDetails } from 'services/api';
 // import { createBrowserHistory } from 'history';
-import PageHeading from 'components/PageHeading/PageHeading';
+import PageHeading from 'components/PageРeading/PageHeading';
 
 export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
@@ -42,12 +42,11 @@ export default function MovieDetailsPage() {
 
   return (
     <>
-        <button onClick={handleClick} className={s.backButton}>
+        <button onClick={handleClick} className={styles.backButton}>
           Go back
         </button>
 
         {movie && <PageHeading text={movie.title} />}
-        {/* <h2>Movie Review</h2> */}
         {loading && 'Loading ...'}
         {error && <div>{error}</div>}
         {movie && (
@@ -73,7 +72,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={s.reviews}>Reviews</p>
+            <p className={styles.reviews}>Reviews</p>
           </NavLink>
 
           <NavLink
@@ -81,7 +80,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={s.cast}>Cast</p>
+            <p className={styles.cast}>Cast</p>
           </NavLink>
           <hr />
           <Outlet />

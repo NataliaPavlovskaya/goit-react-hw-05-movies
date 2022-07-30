@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import PageHeading from 'components/PageHeading/PageHeading';
+import PageHeading from 'components/PageРeading/PageHeading';
 import MovieList from 'components/TrendingMovies/MovieList';
 
 import { getMovies } from 'services/api';
