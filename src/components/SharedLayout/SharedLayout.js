@@ -1,11 +1,61 @@
+import React from 'react'
 import { Outlet } from "react-router-dom";
-import AppBar from "components/AppBar";
+import styles from './SharedLayout.module.css';
+import { NavLink } from 'react-router-dom';
 
-export const SharedLayout = () => {
+const SharedLayout = () => {
   return (
     <>
-      <AppBar />
-      <Outlet />
-      </>
+    <header className={styles.header}>
+    <nav className={styles.nav}>
+      <NavLink
+        exact
+        to="/"
+        className={styles.link}
+        activeClassName={styles.activeLink}
+      >
+        Home
+      </NavLink>
+
+      <NavLink
+        exact
+        to="/movies"
+        className={styles.link}
+        activeClassName={styles.activeLink}
+      >
+        Movies
+      </NavLink>
+      
+    </nav>
+    </header>
+    <Outlet />
+    </>
   );
-};
+}
+
+export default SharedLayout;
+
+
+
+
+
+
+// import React from 'react'
+// import PropTypes from 'prop-types';
+// import SearchFrom from 'components/SearchForm';
+
+
+// import styles from './Search.module.css';
+
+
+// const SearchBar = ({ onSearch }) => (
+//     <header className={styles.Searchbar}>
+//       <SearchFrom onSearch={onSearch} />
+//     </header>
+//   );
+  
+//   SearchBar.propTypes = {
+//     onSearch: PropTypes.func.isRequired,
+//   };
+  
+//   export default SearchBar;
