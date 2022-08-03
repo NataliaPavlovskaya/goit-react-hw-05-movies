@@ -30,7 +30,8 @@ const SearchFrom = ({onSearch}) => {
   const resetForm = () => setQuery('');
   
   return (
-  <form className={styles.SearchForm} onSubmit={handleFormSubmit}>
+    <>
+      <form className={styles.SearchForm} onSubmit={handleFormSubmit}>
     <input
       className={styles['SearchForm-input']}
       type="text"
@@ -44,7 +45,9 @@ const SearchFrom = ({onSearch}) => {
     <button type="submit" className={styles.button}>
         Search
       </button>
-  </form>);
+  </form>
+    </>
+  )
 };
 
 SearchFrom.propTypes = {

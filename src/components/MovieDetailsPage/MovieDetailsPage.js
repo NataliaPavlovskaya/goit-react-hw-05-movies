@@ -4,7 +4,8 @@ import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesDetails } from 'services/api';
 // import { createBrowserHistory } from 'history';
-import PageHeading from 'components/PageРeading/PageHeading';
+import PageHeading from 'components/PageHeading/PageHeading';
+import Container from 'components/Container/Container';
 
 export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
@@ -42,6 +43,7 @@ export default function MovieDetailsPage() {
 
   return (
     <>
+    <Container>
         <button onClick={handleClick} className={styles.backButton}>
           Go back
         </button>
@@ -69,7 +71,7 @@ export default function MovieDetailsPage() {
           <h2>Additional Information</h2>
           <NavLink
             to={`/movies/${movieId}/reviews`}
-            style={({ isActive }) => (isActive ? activeClassName : undefined)}
+            style={({ isActive }) => (isActive ? activeClassName  : undefined)}
             state={location.state}
           >
             <p className={styles.reviews}>Reviews</p>
@@ -77,7 +79,7 @@ export default function MovieDetailsPage() {
 
           <NavLink
             to={`/movies/${movieId}/cast`}
-            style={({ isActive }) => (isActive ? activeClassName : undefined)}
+            style={({ isActive }) => (isActive ? activeClassName  : undefined)}
             state={location.state}
           >
             <p className={styles.cast}>Cast</p>
@@ -85,6 +87,7 @@ export default function MovieDetailsPage() {
           <hr />
           <Outlet />
         </div>
+        </Container>
     </>
   );
 }

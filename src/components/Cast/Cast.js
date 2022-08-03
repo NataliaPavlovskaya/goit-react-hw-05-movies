@@ -35,11 +35,6 @@ const Cast = () => {
           return (
             <li key={castItem.id} className={styles.castItem}>
               <img
-                // src={
-                //   castItem.profile_path
-                //     ? `https://image.tmdb.org/t/p/w300${castItem.profile_path}`
-                //     : brockenImg
-                // }
                 src={`https://image.tmdb.org/t/p/w300${castItem.profile_path}`}
                 alt={`${castItem.name} portrait`}
               />

@@ -8,11 +8,11 @@
     box-shadow: 1px 2px 2px 0 rgb(0, 0, 0/0.5);
     transition: box-shadow 250ms linear;
     border-radius: 10px;
-    border: 1px solid #2196f3;
+    border: 1px solid #606dbc;
   }
   
   .backButton:hover {
-    background-color: #2196f3;
+    background-color: #465298;
     color: white;
   }
   
@@ -20,21 +20,23 @@
     display: inline-block;
     padding: 8px 15px;
     border-radius: 10px;
-    border: 1px solid #2196f3;
+    border: 1px solid #606dbc;
     margin-right: 30px;
     font-weight: bold;
+    color: #000;
   }
   
   .cast {
     display: inline-block;
     padding: 8px 28px;
     border-radius: 10px;
-    border: 1px solid #2196f3;
+    border: 1px solid #606dbc;
     font-weight: bold;
+    color: #000;
   }
   
   .reviews:hover,
   .cast:hover {
-    background-color: #2196f3;
+    background-color: #465298;
     color: white;
   }

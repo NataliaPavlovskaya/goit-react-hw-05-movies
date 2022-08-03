@@ -2,11 +2,13 @@ import React from 'react'
 import { Outlet } from "react-router-dom";
 import styles from './SharedLayout.module.css';
 import { NavLink } from 'react-router-dom';
+import Container from 'components/Container/Container';
 
 const SharedLayout = () => {
   return (
     <>
     <header className={styles.header}>
+    <Container>
     <nav className={styles.nav}>
       <NavLink
         exact
@@ -27,6 +29,7 @@ const SharedLayout = () => {
       </NavLink>
       
     </nav>
+    </Container>
     </header>
     <Outlet />
     </>

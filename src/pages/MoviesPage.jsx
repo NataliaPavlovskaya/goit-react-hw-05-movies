@@ -4,7 +4,8 @@ import { useSearchParams } from 'react-router-dom';
 import SearchBar from 'components/SearchForm/SearchForm';
 import { fetchByQuery } from 'services/api';
 import MovieList from 'components/TrendingMovies/MovieList';
-import PageHeading from 'components/PageРeading/PageHeading';
+import PageHeading from 'components/PageHeading/PageHeading';
+import Container from 'components/Container/Container';
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -46,6 +47,7 @@ const MoviesPage = () => {
 
   return (
     <>
+    <Container>
         <PageHeading text={'Movie Search'} />
         {/* <h1>Movies search</h1> */}
         {loading && 'Loading ...'}
@@ -53,6 +55,7 @@ const MoviesPage = () => {
 
         <SearchBar onSearch={onSubmit} />
         {movies && <MovieList movies={movies} prevLocation={location} />}
+        </Container>
     </>
   );
 };
