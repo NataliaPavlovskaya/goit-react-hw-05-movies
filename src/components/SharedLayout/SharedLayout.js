@@ -11,8 +11,7 @@ const SharedLayout = () => {
     <Container>
     <nav className={styles.nav}>
       <NavLink
-        exact
-        to="/"
+        to="/*"
         className={styles.link}
         activeClassName={styles.activeLink}
       >
@@ -20,7 +19,6 @@ const SharedLayout = () => {
       </NavLink>
 
       <NavLink
-        exact
         to="/movies"
         className={styles.link}
         activeClassName={styles.activeLink}
